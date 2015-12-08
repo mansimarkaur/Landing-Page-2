@@ -1,0 +1,133 @@
+#loader-wrapper {
+    z-index: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0; left: 0;
+    background-color: #ddd;
+}
+
+#loader {
+    z-index: 1;
+    position: relative;
+    display: block;
+    width: 250px;
+    height: 250px;
+    left: 50%;
+    top: 50%;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top-color: #3498db;
+    margin: -125px 0 0 -125px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader-wrapper #logo{
+    z-index: 1;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    left: 47%;
+    right: 47%;
+    top: 45%;
+    border-radius: 50%;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    left: 5px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top-color: #e74c3c;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    bottom: 15px;
+    left: 15px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    border-top-color: #f9c922;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+
+/* CSS 3, Please!
+==================
+Source: www.css3please.com */
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {}
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {}
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+
+#loader-wrapper .loader-side {
+    z-index: 0;
+    position: fixed;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background-color: #ccc;
+}
+
+#loader-wrapper .LHS{ left: 0; }
+
+#loader-wrapper .RHS{ right: 0; }
+
+.loaded #loader-wrapper .LHS{
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all 0.3s 0.3s ease-out;
+    transition: all 0.3s 0.3s ease-out;
+}
+
+.loaded #loader-wrapper .RHS{
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: all 0.3s 0.3s ease-out;
+    transition: all 0.3s 0.3s ease-out;
+}
+
+.loaded #loader{
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.loaded #loader-wrapper{
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-transition: all 0.3s 0.6s ease-out;
+    transition: all 0.3s 0.6s ease-out;
+}
