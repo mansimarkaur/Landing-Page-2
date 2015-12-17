@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>CollegeSpace</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="css/bootstrap-theme.min.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script> new WOW().init(); </script>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/home.css">
+    <script src="js/home.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <span class="CS" style="margin-right: 20px;"> College Space </span>
+                </a>
+                <div class="input-group custom-search-form" align="center" style="padding: auto;">
+                            <input type="text" class="form-control" id="search" placeholder="Search...">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+            </div>
+
+            <div class="collapse navbar-collapse sidebar-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href=""><i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li  class="">
+                        <a href="#time-table"><i class="fa fa-table"></i> Time Table</a>
+                    </li>
+                    <li class="">
+                        <a href="#results"><i class="fa fa-graduation-cap"></i> Result</a>
+                    </li>
+                    <li class="">
+                        <a href="javascript:;" data-toggle="collapse" data-target="#types"><i class="fa fa-calendar"></i> Datesheets<i class="fa fa-fw fa-caret-down"></i></a>
+                        <ul id="types" class="collapse">
+                            <li>
+                                <a href="#theory"><i class="fa fa-pencil"></i> Theory</a>
+                            </li>
+                            <li>
+                                <a href="#practicals"><i class="fa fa-flask"></i> Practicals</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a href=""><i class="fa fa-book"></i> Notes</a>
+                    </li>
+                    <li class="">
+                        <a href=""><i class="fa fa-file"></i> Syllabus</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="page-wrapper">
+            <!-- Recent Updates -->
+            <div id="updates">
+                <div class="jumbotron wow fadeIn">
+                    <h2>Recent Updates</h2>
+                </div>
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>COE Winter Training</b>
+                            <i><span class="pull-right text-muted small">uploaded on 14/12/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>ECE Winter Training</b>
+                            <i><span class="pull-right text-muted small">uploaded on 12/12/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>Practical Datesheet</b>
+                            <i><span class="pull-right text-muted small">uploaded on 10/12/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>Admit Card Collection</b>
+                            <i><span class="pull-right text-muted small">uploaded on 8/11/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="show-more">
+                <a href="#"><b>Show all Updates <i class="fa fa-arrow-circle-right"></i></b></a>
+            </div>
+            </div>
+            <!-- /.Updates -->
+
+            <!-- Time Table -->
+            <span id="time-table"></span><hr/>
+
+            <div>
+                <div class="jumbotron wow fadeIn">
+                    <h2>Time Table</h2>
+                </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8 wow">
+                    <table class="table table-striped wow" style="text-align:center;">
+                        <thead class="wow">
+                            <tr class="wow fadeInLeft" data-wow-delay="300ms">
+                                <th style="text-align:center;">Branch</th>
+                                <th style="text-align:center;">2nd Sem</th>
+                                <th style="text-align:center;">4th Sem</th>
+                                <th style="text-align:center;">6th Sem</th>
+                                <th style="text-align:center;">8th Sem</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="wow">
+                            <tr class="wow fadeInRight" data-wow-delay="300ms">
+                                <td>COE</td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                            </tr>
+
+                            <tr class="wow fadeInLeft" data-wow-delay="300ms">
+                                <td>IT</td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                            </tr>
+
+                            <tr class="wow fadeInRight" data-wow-delay="300ms">
+                                <td>ECE</td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                            </tr>
+
+                            <tr class="wow fadeInLeft" data-wow-delay="300ms">
+                                <td>ICE</td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a>   <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a>   <a href="#">||</a> <a href="#">|||</a></td>
+                                <td><a href="#">|</a> <a href="#">||</a> <a href="#">|||</a></td>
+                            </tr>
+
+                            <tr class="wow fadeInRight" data-wow-delay="300ms">
+                                <td>MP</td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                                <td><a href="#">|</a> <a href="#">||</a></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                <div class="row">
+                <div class="col-lg-3">
+                </div>
+                <div class="col-lg-6">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>Practical Datesheet</b>
+                            <i><span class="pull-right text-muted small">uploaded on 8/11/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x480.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+                <div class="show-more">
+                <a href="#"><b>Show Other Schedules <i class="fa fa-arrow-circle-right"></i></b></a>
+            </div>
+            <!-- /.Time Table -->
+            </div>
+
+            <!-- Results-->
+            <span id="results"></span><hr/>
+
+            <div>
+                    <div class="jumbotron">
+                        <h2 class="wow pulse animated" data-wow-delay="300ms" data-wow-iteration="infinite">Results</h2>
+                </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8 wow">
+                    <table class="table table-striped wow" style="text-align:center;">
+                        <thead class="wow">
+                            <tr class="wow flipInX">
+                                <th style="text-align:center;">Semester (2015)</th>
+                                <th style="text-align:center;">Results</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="wow">
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="200ms">2nd Sem</td>
+                                <td class="wow flipInX" data-wow-delay="200ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="400ms">4th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="400ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="600ms">6th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="600ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="800ms">8th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="800ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8 wow">
+                    <table class="table table-striped wow" style="text-align:center;">
+                        <thead class="wow">
+                            <tr class="wow flipInX">
+                                <th style="text-align:center;">Semester (2014)</th>
+                                <th style="text-align:center;">Results</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="wow">
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="200ms">1st Sem</td>
+                                <td class="wow flipInX" data-wow-delay="200ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="400ms">3rd Sem</td>
+                                <td class="wow flipInX" data-wow-delay="400ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="600ms">5th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="600ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="800ms">7th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="800ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                <div class="show-more">
+                <a href="#"><b>Show Previous Results <i class="fa fa-arrow-circle-right"></i></b></a>
+            </div>
+            </div>
+            <!-- /.Results-->
+
+            <!-- Datesheet-->
+            <span id="theory"></span><hr/>
+
+            <div>
+                    <div class=" jumbotron wow fadeIn">
+                        <h2>Datesheet<br/>
+                        <small> - Theory -</small></h2>
+                    </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8 wow">
+                    <table class="table table-striped wow" style="text-align:center;">
+                        <thead class="wow">
+                            <tr class="wow flipInX">
+                                <th style="text-align:center;">Semester (2015)</th>
+                                <th style="text-align:center;">Datesheet</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="wow">
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="200ms">1st Sem</td>
+                                <td class="wow flipInX" data-wow-delay="200ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="400ms">3rd Sem</td>
+                                <td class="wow flipInX" data-wow-delay="400ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="600ms">5th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="600ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="800ms">7th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="800ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8 wow">
+                    <table class="table table-striped wow" style="text-align:center;">
+                        <thead class="wow">
+                            <tr class="wow flipInX">
+                                <th style="text-align:center;">Semester (2014)</th>
+                                <th style="text-align:center;">Results</th>
+                            </tr>
+                        </thead>
+
+                        <tbody class="wow">
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="200ms">2nd Sem</td>
+                                <td class="wow flipInX" data-wow-delay="200ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="400ms">4th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="400ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="600ms">6th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="600ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                            <tr>
+                                <td class="wow flipInX" data-wow-delay="800ms">8th Sem</td>
+                                <td class="wow flipInX" data-wow-delay="800ms"><i><a href="#">Download</a></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+                <div class="show-more">
+                <a href="#"><b>Show more <i class="fa fa-arrow-circle-right"></i></b></a>
+            </div>
+            </div>
+            <!-- /.Datesheet Theory-->
+
+            <!-- Datesheet Practical-->
+            <span id="practicals"></span><hr/>
+
+            <div>
+                <div class=" jumbotron wow fadeIn">
+                        <h2>Datesheet<br/>
+                        <small> - Practicals -</small></h2>
+                    </div>
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>ED, MD and Workshop</b>
+                            <i><span class="pull-right text-muted small">uploaded on 14/12/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>1st and 3rd Sem</b>
+                            <i><span class="pull-right text-muted small">uploaded on 12/12/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-1">
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>IT 5th Sem</b>
+                            <i><span class="pull-right text-muted small">uploaded on 10/12/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="panel panel-default">
+                        <div class="panel-heading wow flipInY">
+                            <i class=""></i> <b>ICE 7th Sem Revised</b>
+                            <i><span class="pull-right text-muted small">uploaded on 8/11/15</span></i>
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body wow flipInY">
+                            <!--div class="list-group wow fadeInUp" -->
+                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
+                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                </a>
+                            <!-- /div -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-1">
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="show-more">
+                <a href="#"><b>Show more <i class="fa fa-arrow-circle-right"></i></b></a>
+            </div>
+            </div>
+            <!-- /.Datesheet Practical-->
+
+
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <div class="modal fade" id="popUpWindow">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- header -->
+
+                <!-- body(form) -->
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <form role="form">
+                        <div class="form-group" align="center">
+                            <img src="400x480.png" class="img-responsive latest-updates-img">
+                        </div>
+                    </form>
+                </div>
+
+                <!-- footer -->
+                <div class="modal-footer">
+                    <a href="400x480.png" download><b>Download <i class="fa fa-download"></i></b></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
