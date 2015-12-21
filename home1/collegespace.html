@@ -1,0 +1,47 @@
+
+<html>
+<head>
+	<title>My Page</title>
+	<script type="text/javascript">
+	var x = new XMLHttpRequest();
+	x.open("GET", "http://zakimonkey.com/test5.php?key=97724fe69733fdbf16bfd18725b2531e", true);
+	x.onreadystatechange = function () {
+	  if (x.readyState == 4 && x.status == 200)
+	  {
+		var doc = x.responseXML;
+		for (var i = 0; doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i]; i++) {
+			
+			var title = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("title")[0].firstChild.nodeValue;
+			
+			var link = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("link")[0].firstChild.nodeValue;
+			
+			var comments = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("comments")[0].firstChild.nodeValue;
+			
+			var pubdate = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("pubDate")[0].firstChild.nodeValue;
+			
+			var creator = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("creator")[0].firstChild.nodeValue;
+			
+			var category = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("category")[0].firstChild.nodeValue;
+			
+			var description = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("description")[0].firstChild.nodeValue;
+			
+			var commentsrss = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("commentRss")[0].firstChild.nodeValue;
+			
+			document.write("<p>")
+			document.write("<b>Title:</b> "+title+"<br>");
+			document.write("<b>Link:</b> "+link+"<br>");
+			document.write("<b>Comments:</b> "+comments+"<br>");
+			document.write("<b>pubDate:</b> "+pubdate+"<br>");
+			document.write("<b>Creator:</b> "+creator+"<br>");
+			document.write("<b>Category:</b> "+category+"<br>");
+			document.write("<b>Description:</b> "+description+"<br>");
+			document.write("<b>commentsrss:</b> "+commentsrss+"<br>");
+			//document.write("<b>Slash:Comments:</b> "+slashcomments+"<br>");
+			document.write("</p>");
+		};
+	  }
+	};
+	x.send(null);
+	</script>
+</head>
+</html>
