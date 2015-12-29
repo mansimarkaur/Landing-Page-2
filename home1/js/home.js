@@ -53,7 +53,7 @@ wheelEvent="mousewheel";if(wheelEvent&&isChrome){addEvent(wheelEvent,wheel);addE
 $(function() {
   $('#search').click(function() {
     $('.side-nav').css('opacity', '0.5');
-    $('#page-wrapper').css('opacity', '0.5');
+    $('#page-wrapper').css('opacity', '0.8');
     $('.side-nav').css('transition', 'opacity 0.15s linear');
     $('#page-wrapper').css('transition', 'opacity 0.15s linear');
   });
@@ -71,3 +71,70 @@ $(function() {
   });
 
 });
+
+$(window).load(function(){
+    $('.list-group-item>img').on('click',function() {
+      var sr=$(this).attr('src');
+      $('#modalImg').attr('src',sr);
+      $('#downloadLink').attr('href',sr);
+      $('#popUpWindow').modal('show');
+    });
+    $('.list-group-item').on('click',function() {
+      var sr=$('img',this).attr('src');
+      $('#modalImg').attr('src',sr);
+      $('#downloadLink').attr('href',sr);
+      $('#popUpWindow').modal('show');
+    });
+});
+
+function codeAddress() {
+var x = new XMLHttpRequest();
+x.open("GET", "http://zakimonkey.com/test5.php?key=97724fe69733fdbf16bfd18725b2531e", true);
+x.onreadystatechange = function () {
+if (x.readyState == 4 && x.status == 200) {
+    var doc = x.responseXML;
+	for (var i = 0; i<4; i++) {
+        var idd = "pan["+i+"]";
+	    var title = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("title")[0].firstChild.nodeValue;
+	    var link = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("link")[0].firstChild.nodeValue;
+	    var pubdate = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("pubDate")[0].firstChild.nodeValue;
+        document.getElementById(idd).innerHTML = "<a href=\""+link+"\"><b>"+title+"</b></a><i><span class=\"pull-right text-muted small\">"+pubdate+"</span></i>";
+    };
+}
+};
+x.send(null);
+var y = new XMLHttpRequest();
+y.open("GET", "datesheets-feed.xml", true);
+y.onreadystatechange = function () {
+if (y.readyState == 4 && y.status == 200) {
+    var doc = y.responseXML;
+    for (var i = 0; i<4; i++) {
+        var idd = "prac["+i+"]";
+		var title = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("title")[0].firstChild.nodeValue;
+		var link = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("link")[0].firstChild.nodeValue;
+		var pubdate = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("pubDate")[0].firstChild.nodeValue;
+        document.getElementById(idd).innerHTML = "<a href=\""+link+"\"><b>"+title+"</b></a><i><span class=\"pull-right text-muted small\">"+pubdate+"</span></i>";
+    };
+}
+};
+y.send(null);
+var z = new XMLHttpRequest();
+z.open("GET", "nsitpedia-feed.xml", true);
+z.onreadystatechange = function () {
+if (z.readyState == 4 && z.status == 200) {
+    var doc = z.responseXML;
+    for (var i = 0; i<2; i++) {
+        var idd = "pedia["+i+"]";
+		var title = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("title")[0].firstChild.nodeValue;
+		var link = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("link")[0].firstChild.nodeValue;
+		var pubdate = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("pubDate")[0].firstChild.nodeValue;
+		var creator = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("creator")[0].firstChild.nodeValue;
+		var category = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("category")[0].firstChild.nodeValue;
+		var description = doc.getElementsByTagName("channel")[0].getElementsByTagName("item")[i].getElementsByTagName("description")[0].firstChild.nodeValue;
+        document.getElementById(idd).innerHTML = "<h3 class=\"wow fadeIn\" data-wow-delay=\"600ms\"><a href=\""+link+"\">"+title+"</a></h3><div class=\"col-xs-3 wow fadeIn\" data-wow-delay=\"700ms\" style=\"text-align: center;\"><small><a href=\""+link+"\"><i class=\"fa fa-calendar\"></i> "+pubdate+"</a></small></div><div class=\"col-xs-3 wow fadeIn\" data-wow-delay=\"800ms\" style=\"text-align: center;\"><small><a href=\"\"><i class=\"fa fa-user\"></i> "+creator+"</a></small></div><div class=\"col-xs-3 wow fadeIn\" data-wow-delay=\"900ms\" style=\"text-align: center;\"><small><a href=\""+link+"#comments\"><i class=\"fa fa-comments\"></i> 53 Comments</a></small></div><div class=\"col-xs-3 wow fadeIn\" data-wow-delay=\"1000ms\" style=\"text-align: center;\"><small><a href=\"http://nsitpedia.collegespace.in/category/blog/\"><i class=\"fa fa-folder-o\"></i> Blog-</a><a href=\"\">"+category+"</a></small></div><p class=\"wow fadeIn\" data-wow-delay=\"1200ms\">"+description+"</p>";
+    };
+}
+};
+z.send(null);
+}
+window.onload = codeAddress;

@@ -39,7 +39,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="index.html">
-                    <span class="CS" style="margin-right: 20px;"> College Space </span>
+                    <span class="CS" style="margin-right: 20px;"> CollegeSpace </span>
                 </a>
                 <div class="input-group custom-search-form" align="center" style="padding: auto;">
                             <input type="text" class="form-control" id="search" placeholder="Search...">
@@ -55,6 +55,9 @@
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
                         <a href=""><i class="fa fa-home"></i> Home</a>
+                    </li>
+                    <li  class="">
+                        <a href="#nsitpedia"><i class="fa fa-table"></i> NSITPedia</a>
                     </li>
                     <li  class="">
                         <a href="#time-table"><i class="fa fa-table"></i> Time Table</a>
@@ -82,7 +85,7 @@
                 </ul>
             </div>
         </nav>
-
+        <div id="back-page-wrapper">
         <div id="page-wrapper">
             <!-- Recent Updates -->
             <div id="updates">
@@ -94,15 +97,14 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>COE Winter Training</b>
-                            <i><span class="pull-right text-muted small">uploaded on 14/12/15</span></i>
+                        <div class="panel-heading wow flipInY" id="pan[0]">
+
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body wow flipInY">
+                        <div class="panel-body wow flipInY 1">
                             <!--div class="list-group wow fadeInUp" -->
                                 <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
-                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                    <img src="http://updates.collegespace.in/wp-content/uploads/2015/12/Notice.jpg" width="253" height="450" class="img-responsive latest-updates-img">
                                 </a>
                             <!-- /div -->
                         </div>
@@ -110,15 +112,14 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>ECE Winter Training</b>
-                            <i><span class="pull-right text-muted small">uploaded on 12/12/15</span></i>
+                        <div class="panel-heading wow flipInY" id="pan[1]">
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body wow flipInY">
                             <!--div class="list-group wow fadeInUp" -->
                                 <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
-                                    <img src="400x450.png" class="img-responsive latest-updates-img">
+                                    <img src="http://updates.collegespace.in/wp-content/uploads/2015/12/IMG-20151212-WA0014.jpg" width="253" height="450" class="img-responsive latest-updates-img">
                                 </a>
                             <!-- /div -->
                         </div>
@@ -133,9 +134,8 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>Practical Datesheet</b>
-                            <i><span class="pull-right text-muted small">uploaded on 10/12/15</span></i>
+                        <div class="panel-heading wow flipInY" id="pan[2]">
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body wow flipInY">
@@ -149,9 +149,8 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>Admit Card Collection</b>
-                            <i><span class="pull-right text-muted small">uploaded on 8/11/15</span></i>
+                        <div class="panel-heading wow flipInY" id="pan[3]">
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body wow flipInY">
@@ -172,6 +171,44 @@
             </div>
             </div>
             <!-- /.Updates -->
+
+            <!-- Time Table -->
+            <span id="nsitpedia"></span><hr/>
+
+            <div>
+                <div class="jumbotron wow fadeIn">
+                    <h2>NSITPedia</h2>
+                </div>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8">
+                    <a href="">
+                        <img src="400x450.png" class="img-responsive latest-updates-img wow fadeIn" data-wow-delay="400ms">
+                    </a>
+                    <div id="pedia[0]">
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-2">
+                </div>
+                <div class="col-lg-8">
+                    <a href="">
+                        <img src="400x450.png" class="img-responsive latest-updates-img wow fadeIn" data-wow-delay="400ms">
+                    </a>
+                    <div id="pedia[1]">
+                    </div>
+                </div>
+
+            </div>
+                <div class="show-more">
+                <a href="http://nsitpedia.collegespace.in/"><b>Go to NSITPedia <i class="fa fa-arrow-circle-right"></i></b></a>
+            </div>
+            <!-- /.Time Table -->
+            </div>
 
             <!-- Time Table -->
             <span id="time-table"></span><hr/>
@@ -237,28 +274,6 @@
                             </tr>
                         </tbody>
                     </table>
-                </div>
-            </div>
-                <div class="row">
-                <div class="col-lg-3">
-                </div>
-                <div class="col-lg-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>Practical Datesheet</b>
-                            <i><span class="pull-right text-muted small">uploaded on 8/11/15</span></i>
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body wow flipInY">
-                            <!--div class="list-group wow fadeInUp" -->
-                                <a data-toggle="modal" data-target="#popUpWindow" class="list-group-item">
-                                    <img src="400x480.png" class="img-responsive latest-updates-img">
-                                </a>
-                            <!-- /div -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-1">
                 </div>
             </div>
                 <div class="show-more">
@@ -439,9 +454,8 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>ED, MD and Workshop</b>
-                            <i><span class="pull-right text-muted small">uploaded on 14/12/15</span></i>
+                        <div class="panel-heading wow flipInY" id="prac[0]">
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body wow flipInY">
@@ -455,9 +469,8 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>1st and 3rd Sem</b>
-                            <i><span class="pull-right text-muted small">uploaded on 12/12/15</span></i>
+                        <div class="panel-heading wow flipInY" id="prac[1]">
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body wow flipInY">
@@ -478,9 +491,8 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>IT 5th Sem</b>
-                            <i><span class="pull-right text-muted small">uploaded on 10/12/15</span></i>
+                        <div class="panel-heading wow flipInY" id="prac[2]">
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body wow flipInY">
@@ -494,9 +506,8 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="panel panel-default">
-                        <div class="panel-heading wow flipInY">
-                            <i class=""></i> <b>ICE 7th Sem Revised</b>
-                            <i><span class="pull-right text-muted small">uploaded on 8/11/15</span></i>
+                        <div class="panel-heading wow flipInY" id="prac[3]">
+
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body wow flipInY">
@@ -521,6 +532,7 @@
 
         </div>
         <!-- /#page-wrapper -->
+            </div>
 
     </div>
     <!-- /#wrapper -->
@@ -535,14 +547,14 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                     <form role="form">
                         <div class="form-group" align="center">
-                            <img src="400x480.png" class="img-responsive latest-updates-img">
+                            <img id="modalImg" src="" class="img-responsive latest-updates-img">
                         </div>
                     </form>
                 </div>
 
                 <!-- footer -->
                 <div class="modal-footer">
-                    <a href="400x480.png" download><b>Download <i class="fa fa-download"></i></b></a>
+                    <a id="downloadLink" href="" download><b>Download <i class="fa fa-download"></i></b></a>
                 </div>
             </div>
         </div>
