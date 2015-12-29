@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title> CS </title>
+	<script type="text/javascript" src="http://www.google.com/jsapi?key=AIzaSyCtcr_CAfXeeZPcL9VycV7TjRP8Ukxtv5Y">
+	</script>
+	<div id="feeddiv"></div>
+	<script type="text/javascript">
+	var feedcontainer=document.getElementById("feeddiv")
+	var feedurl="http://updates.collegespace.in/"
+	var feedlimit=5
+	var rssoutput="<b>Here!</b><br /><ul>"
+	function rssfeedsetup()
+        {
+	   var feedpointer=new google.feeds.Feed(feedurl) 
+	   feedpointer.setNumEntries(feedlimit) 
+	   feedpointer.load(displayfeed) 
+        }
+	function displayfeed(result)
+        {
+	   if (!result.error)
+           {
+	    var thefeeds=result.feed.entries
+	    for (var i=0; i<thefeeds.length; i++)
+	    rssoutput+="<li><a href='" + thefeeds[i].link + "'>" + thefeeds[i].title + "</a></li>"
+	    rssoutput+="</ul>"
+	    feedcontainer.innerHTML=rssoutput
+	   }
+	   else
+	    alert("Error fetching feeds!")
+        }
+	window.onload=function()
+        {
+	    rssfeedsetup()
+        }
+	</script>
+	<script type="text/javascript">
+	google.load("feeds", "1") 
+	</script>
+</head>
+</html>
