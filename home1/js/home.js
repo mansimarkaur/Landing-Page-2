@@ -77,13 +77,11 @@ $(window).load(function(){
       var sr=$(this).attr('src');
       $('#modalImg').attr('src',sr);
       $('#downloadLink').attr('href',sr);
-      $('#popUpWindow').modal('show');
     });
     $('.list-group-item').on('click',function() {
       var sr=$('img',this).attr('src');
       $('#modalImg').attr('src',sr);
       $('#downloadLink').attr('href',sr);
-      $('#popUpWindow').modal('show');
     });
 });
 
@@ -104,7 +102,7 @@ if (x.readyState == 4 && x.status == 200) {
 };
 x.send(null);
 var y = new XMLHttpRequest();
-y.open("GET", "datesheets-feed.xml", true);
+y.open("GET", "http://zakimonkey.com/test5.php?key=87ee709a5c38bdbdb52638dd708dcf3f", true);
 y.onreadystatechange = function () {
 if (y.readyState == 4 && y.status == 200) {
     var doc = y.responseXML;
@@ -119,7 +117,7 @@ if (y.readyState == 4 && y.status == 200) {
 };
 y.send(null);
 var z = new XMLHttpRequest();
-z.open("GET", "nsitpedia-feed.xml", true);
+z.open("GET", "http://zakimonkey.com/test5.php?key=7422a7f671b78319371a87dbf4df22db", true);
 z.onreadystatechange = function () {
 if (z.readyState == 4 && z.status == 200) {
     var doc = z.responseXML;
