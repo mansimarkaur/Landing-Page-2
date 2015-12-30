@@ -1,1 +1,1 @@
-# Use IntelliJ to run home.html (built-in Server)
+Feed done, left with image fetching.
